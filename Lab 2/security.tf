@@ -1,12 +1,3 @@
-resource "aws_ec2_instance_connect_endpoint" "EC2_Endpoint" {
-  subnet_id          = aws_subnet.private_subnet.id
-  security_group_ids = [aws_security_group.SG.id]
-
-  tags = {
-    "Name" = "EC2_Endpoint"
-  }
-}
-
 resource "aws_security_group" "SG" {
   vpc_id      = aws_vpc.VPC.id
   description = "SG"
