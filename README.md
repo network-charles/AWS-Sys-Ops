@@ -11,3 +11,7 @@ https://github.com/Its-All-About-the-Journey/AWS-Advanced-Networking
 # Lab 2
 ## Privately Access EC2 Using Systems Manager 
 ![Screenshot (989)](https://github.com/network-charles/AWS-Sys-Ops/assets/30233365/a1365929-d101-4706-98b0-cddaccc63fb4)
+
+# Lab 3
+## Sending Notifications for Amazon S3 Object Uploads and Deletions using EventBridge & SNS
+![Screenshot (991)](https://github.com/network-charles/AWS-Sys-Ops/assets/30233365/c62c612f-4d82-47ce-92eb-29b381bf874c)
