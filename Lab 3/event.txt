@@ -1,0 +1,6 @@
+Hi
+
+aws events put-rule --name object-notification --event-pattern '{
+  "source": ["aws.s3"],
+  "detail-type": ["Object Created", "Object Deleted"]
+}' --state ENABLED
