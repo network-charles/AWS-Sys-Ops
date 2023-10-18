@@ -1,3 +1,4 @@
+
 resource "aws_security_group" "SG" {
   vpc_id      = aws_vpc.VPC.id
   description = "SG"
@@ -158,3 +159,30 @@ resource "aws_ssm_maintenance_window_task" "Lambda" {
     }
   }
 }
+
+resource "aws_ssm_maintenance_window_task" "Start_EC2" {
+  max_concurrency  = 2
+  max_errors       = 1
+  priority         = 4
+  task_arn         = "AWS-StartEC2Instance"
+  task_type        = "AUTOMATION"
+  window_id        = aws_ssm_maintenance_window.window.id
+  service_role_arn = aws_iam_role.EC2_Role.arn
+
+  targets {
+    key    = "InstanceIds"
+    values = [aws_instance.Instance.id]
+  }
+
+  task_invocation_parameters {
+    automation_parameters {
+      document_version = "$LATEST"
+
+      parameter {
+        name   = "InstanceId"
+        values = [aws_instance.Instance.id]
+      }
+    }
+  }
+}
+
