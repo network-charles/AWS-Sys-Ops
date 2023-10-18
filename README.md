@@ -15,3 +15,7 @@ https://github.com/Its-All-About-the-Journey/AWS-Advanced-Networking
 # Lab 3
 ## Sending Notifications for Amazon S3 Object Uploads and Deletions using EventBridge & SNS
 ![Screenshot (991)](https://github.com/network-charles/AWS-Sys-Ops/assets/30233365/c62c612f-4d82-47ce-92eb-29b381bf874c)
+
+# Lab 4
+## Create a Maintenance Window for Patching, Image Creation, and Deletion.
+![Screenshot (994)](https://github.com/network-charles/AWS-Sys-Ops/assets/30233365/e1cf14dc-8a96-43f3-b327-09f9026f9220)
