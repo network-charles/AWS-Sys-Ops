@@ -2,7 +2,7 @@ terraform {
   backend "s3" {
     bucket         = ""
     key            = "terraform.tfstate"
-    region         = "us-west-2"
+    region         = "eu-west-2"
     dynamodb_table = ""
   }
 
@@ -16,7 +16,7 @@ terraform {
 
 # Configure the AWS Provider for Account A
 provider "aws" {
-  region = "us-west-2"
+  region = "eu-west-2"
 
   default_tags {
     tags = {
