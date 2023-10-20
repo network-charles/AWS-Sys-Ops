@@ -2,8 +2,12 @@ output "Aurora_Primary_DB" {
   value = aws_rds_cluster.Write.endpoint
 }
 
-output "Aurora_Replica" {
-  value = aws_rds_cluster_instance.Replica.endpoint
+output "Aurora_Replica1" {
+  value = aws_rds_cluster_instance.Replica1.endpoint
+}
+
+output "Aurora_Replica2" {
+  value = aws_rds_cluster_instance.Replica2.endpoint
 }
 
 output "Bastion1" {
