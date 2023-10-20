@@ -121,7 +121,15 @@ resource "aws_rds_cluster_instance" "Writer" {
   db_subnet_group_name = aws_db_subnet_group.Private.name
 }
 
-resource "aws_rds_cluster_instance" "Replica" {
+resource "aws_rds_cluster_instance" "Replica1" {
+  cluster_identifier = aws_rds_cluster.MySQL.id
+  instance_class     = "db.serverless"
+  engine             = aws_rds_cluster.MySQL.engine
+  engine_version     = aws_rds_cluster.MySQL.engine_version
+  db_subnet_group_name = aws_db_subnet_group.Private.name
+}
+
+resource "aws_rds_cluster_instance" "Replica2" {
   cluster_identifier = aws_rds_cluster.MySQL.id
   instance_class     = "db.serverless"
   engine             = aws_rds_cluster.MySQL.engine
