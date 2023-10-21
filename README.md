@@ -25,3 +25,6 @@ https://github.com/Its-All-About-the-Journey/AWS-Advanced-Networking
 ![Screenshot (995)](https://github.com/network-charles/AWS-Sys-Ops/assets/30233365/65570d8f-15e1-4d54-acd0-031a452c2f70)
 
 # Lab 6
+## Create an Aurora MySQL Cluster with 2 Replicas
+![Screenshot (999)](https://github.com/network-charles/AWS-Sys-Ops/assets/30233365/5d456296-ab54-43fa-92a2-f8cc36a3ad06)
+
