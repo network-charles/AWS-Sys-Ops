@@ -1,5 +1,5 @@
 output "Aurora_Primary_DB" {
-  value = aws_rds_cluster.Write.endpoint
+  value = aws_rds_cluster.Writer.endpoint
 }
 
 output "Aurora_Replica1" {
