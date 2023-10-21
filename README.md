@@ -18,7 +18,7 @@ https://github.com/Its-All-About-the-Journey/AWS-Advanced-Networking
 
 # Lab 4
 ## Create a Maintenance Window for Patching, Image Creation, and Deletion.
-![Screenshot (994)](https://github.com/network-charles/AWS-Sys-Ops/assets/30233365/e1cf14dc-8a96-43f3-b327-09f9026f9220)
+![Screenshot (996)](https://github.com/network-charles/AWS-Sys-Ops/assets/30233365/4964a784-aae1-426c-a483-e4af36bc500d)
 
 # Lab 5
 ## Apply Config Rule to Identify a Non-Compliant Resource then Auto-Remediate the Resource to Become Compliant Using SSM
