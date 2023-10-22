@@ -88,8 +88,8 @@ resource "aws_db_instance" "Oracle" {
   kms_key_id             = aws_kms_key.Oracle.arn
   license_model          = "bring-your-own-license"
   multi_az               = true
-  username               = "foo"
-  password               = "foobarbaz"
+  username               = var.username
+  password               = var.password
   vpc_security_group_ids = [aws_security_group.SG.id]
   skip_final_snapshot    = true
   storage_encrypted      = true
