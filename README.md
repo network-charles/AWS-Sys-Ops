@@ -28,3 +28,7 @@ https://github.com/Its-All-About-the-Journey/AWS-Advanced-Networking
 ## Create an Aurora MySQL Cluster with 2 Replicas
 ![Screenshot (1001)](https://github.com/network-charles/AWS-Sys-Ops/assets/30233365/9566e94c-538f-43e6-917d-16197b58cb5c)
 
+# Lab 7
+## Create a Multi-AZ RDS Oracle DB
+![Screenshot (1002)](https://github.com/network-charles/AWS-Sys-Ops/assets/30233365/a0ff91f5-1b4d-4a58-858e-f0b5896f82f5)
+
