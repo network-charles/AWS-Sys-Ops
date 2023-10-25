@@ -29,6 +29,14 @@ https://github.com/Its-All-About-the-Journey/AWS-Advanced-Networking
 ![Screenshot (1001)](https://github.com/network-charles/AWS-Sys-Ops/assets/30233365/9566e94c-538f-43e6-917d-16197b58cb5c)
 
 # Lab 7
-## Create a Multi-AZ RDS Oracle DB
+## Create a Multi-AZ RDS Oracle DB Instance (Support reads in one AZ)
 ![Screenshot (1002)](https://github.com/network-charles/AWS-Sys-Ops/assets/30233365/a0ff91f5-1b4d-4a58-858e-f0b5896f82f5)
+
+# Lab 8
+## Create a Multi-AZ RDS Oracle DB Cluster (support Reads in all AZs)
+![Screenshot (1008)](https://github.com/network-charles/AWS-Sys-Ops/assets/30233365/818e8e9e-893c-4e1f-a06a-ccc82814c7fb)
+
+# Lab 9
+## Create a Redshift Cluster 
+![Screenshot (1005)](https://github.com/network-charles/AWS-Sys-Ops/assets/30233365/b4071ff1-ecc9-42a5-8d8f-9b50fed113c4)
 
