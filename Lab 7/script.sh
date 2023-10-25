@@ -24,6 +24,3 @@ sudo echo 'export PATH=$LD_LIBRARY_PATH:$PATH' >> ~/.bashrc
 
 # Execute the contents in the .bashrc file 
 source ~/.bashrc
-
-sqlplus -V
-
