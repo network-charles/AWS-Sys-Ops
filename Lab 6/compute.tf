@@ -66,8 +66,8 @@ resource "aws_autoscaling_group" "Bastion" {
   launch_configuration = aws_launch_configuration.Linux.name
 
   tag {
-    key                 = "ASG"
-    value               = "Bastion"
+    key                 = "Name"
+    value               = "ASG"
     propagate_at_launch = true
   }
 
