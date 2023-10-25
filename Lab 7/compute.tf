@@ -50,7 +50,7 @@ resource "aws_autoscaling_group" "Bastion" {
   min_size                  = 0
   health_check_grace_period = 300
   health_check_type         = "EC2"
-  desired_capacity          = 0
+  desired_capacity          = 1
   force_delete              = false
   availability_zones        = ["eu-west-2a", "eu-west-2b"]
   launch_configuration      = aws_launch_configuration.Linux.name
