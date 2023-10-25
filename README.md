@@ -40,3 +40,7 @@ https://github.com/Its-All-About-the-Journey/AWS-Advanced-Networking
 ## Create a Redshift Cluster 
 ![Screenshot (1005)](https://github.com/network-charles/AWS-Sys-Ops/assets/30233365/b4071ff1-ecc9-42a5-8d8f-9b50fed113c4)
 
+# Lab 10
+## Create 2 Sharded Redis Replication Group Cluster (Enabled)
+![Screenshot (1009)](https://github.com/network-charles/AWS-Sys-Ops/assets/30233365/cf3d8dc5-5b30-4429-b314-814886a1b133)
+
