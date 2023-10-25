@@ -17,10 +17,10 @@ sudo unzip -d /opt/oracle instantclient-basic-linux.x64-21.11.0.0.0dbru.zip
 sudo unzip -d /opt/oracle instantclient-sqlplus-linux.x64-21.11.0.0.0dbru.zip
 
 # update LD_LIBRARY_PATH to include the directory where Oracle Instant Client is installed
-echo 'export LD_LIBRARY_PATH=/opt/oracle/instantclient_21_11:$LD_LIBRARY_PATH' >> ~/.bashrc
+sudo echo 'export LD_LIBRARY_PATH=/opt/oracle/instantclient_21_11:$LD_LIBRARY_PATH' >> ~/.bashrc
 
 # adjusts the PATH variable to give preference to the directories listed in LD_LIBRARY_PATH
-echo 'export PATH=$LD_LIBRARY_PATH:$PATH' >> ~/.bashrc
+sudo echo 'export PATH=$LD_LIBRARY_PATH:$PATH' >> ~/.bashrc
 
 # Execute the contents in the .bashrc file 
 source ~/.bashrc
