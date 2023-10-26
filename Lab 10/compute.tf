@@ -13,6 +13,8 @@ resource "aws_launch_template" "Linux" {
     create_before_destroy = true
   }
 
+  user_data = filebase64("${path.module}/script.sh")
+
   depends_on = [aws_elasticache_replication_group.Primary]
 }
 
