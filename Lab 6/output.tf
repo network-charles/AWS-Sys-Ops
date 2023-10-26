@@ -13,15 +13,3 @@ output "Aurora_Replica1" {
 output "Aurora_Replica2" {
   value = "mysql -h ${aws_rds_cluster.Replica2.endpoint} -u test -p"
 }
-
-output "Bastion1" {
-  value = "ssh -i '${var.key_name}.pem' ubuntu@${aws_instance.Bastion1.public_ip}"
-}
-
-output "Bastion2" {
-  value = "ssh -i '${var.key_name}.pem' ubuntu@${aws_instance.Bastion2.public_ip}"
-}
-
-output "Bastion3" {
-  value = "ssh -i '${var.key_name}.pem' ubuntu@${aws_instance.Bastion3.public_ip}"
-}
