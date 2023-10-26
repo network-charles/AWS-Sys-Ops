@@ -1,79 +1,48 @@
-resource "aws_instance" "Bastion1" {
-  ami             = var.ubuntu
-  instance_type   = "t3.micro"
-  tenancy         = "default"
-  security_groups = [aws_security_group.SG.id]
-  subnet_id       = aws_subnet.Public_Subnet1.id
-  user_data = file("${path.module}/script.sh")
-  key_name = var.key_name
-
-  tags = {
-    "Name" = "Bastion1"
-  }
-}
-
-resource "aws_instance" "Bastion2" {
-  ami             = var.ubuntu
-  instance_type   = "t3.micro"
-  tenancy         = "default"
-  security_groups = [aws_security_group.SG.id]
-  subnet_id       = aws_subnet.Public_Subnet2.id
-  user_data = file("${path.module}/script.sh")
-  key_name = var.key_name
-
-  tags = {
-    "Name" = "Bastion2"
-  }
-}
-
-resource "aws_instance" "Bastion3" {
-  ami             = var.ubuntu
-  instance_type   = "t3.micro"
-  tenancy         = "default"
-  security_groups = [aws_security_group.SG.id]
-  subnet_id       = aws_subnet.Public_Subnet3.id
-  user_data = file("${path.module}/script.sh")
-  key_name = var.key_name
-
-  tags = {
-    "Name" = "Bastion3"
-  }
-}
-
-resource "aws_launch_configuration" "Linux" {
+resource "aws_launch_template" "Linux" {
   name          = "Linux"
   image_id      = var.ubuntu
   instance_type = "t3.micro"
-  user_data = file("${path.module}/script.sh")
-  key_name = var.key_name
+  key_name      = var.key_name
+  vpc_security_group_ids = [ aws_security_group.SG.id ]
+
+  placement {
+    tenancy = "default"
+  }
 
   lifecycle {
     create_before_destroy = true
   }
 
-  depends_on = [ aws_rds_cluster.MySQL ]
+  user_data = filebase64("${path.module}/script.sh")
+
+  depends_on = [aws_rds_cluste.MySQL]
 }
 
 resource "aws_autoscaling_group" "Bastion" {
   name                      = "Bastion"
-  max_size                  = 1
-  min_size                  = 0
-  health_check_grace_period = 300
+  max_size                  = 3
+  min_size                  = 3
+  health_check_grace_period = 30
   health_check_type         = "EC2"
-  desired_capacity          = 1
+  desired_capacity          = 3
   force_delete              = false
-  availability_zones        = ["eu-west-2a", "eu-west-2b", "eu-west-2c"]
-  launch_configuration = aws_launch_configuration.Linux.name
+  vpc_zone_identifier = [ aws_subnet.Public_Subnet1.id, aws_subnet.Public_Subnet2.id ]
+
+  launch_template {
+    name = aws_launch_template.Linux.name
+  }
 
   tag {
     key                 = "Name"
-    value               = "ASG"
+    value               = "Bastion"
     propagate_at_launch = true
   }
 
   lifecycle {
     create_before_destroy = true
   }
+
+  depends_on = [aws_rds_cluste.MySQL]
 }
 
 resource "aws_db_subnet_group" "Private" {
