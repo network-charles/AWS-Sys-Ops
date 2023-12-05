@@ -47,3 +47,7 @@ https://github.com/Its-All-About-the-Journey/AWS-Advanced-Networking
 # Lab 11
 ## Create a 2 Sharded Memcached Cluster
 ![Screenshot (1010)](https://github.com/network-charles/AWS-Sys-Ops/assets/30233365/a001f8d9-e4f3-4ab9-8965-f9f73d6132dd)
+
+# Lab 12
+## Create and Monitor an ASG for CPU Spike
+![Screenshot (1027)](https://github.com/network-charles/AWS-Sys-Ops/assets/30233365/a37e74d7-b13c-4114-87fb-dc214975ec9b)
