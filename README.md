@@ -51,3 +51,8 @@ https://github.com/Its-All-About-the-Journey/AWS-Advanced-Networking
 # Lab 12
 ## Create and Monitor an ASG for CPU Spike
 ![Screenshot (1027)](https://github.com/network-charles/AWS-Sys-Ops/assets/30233365/a37e74d7-b13c-4114-87fb-dc214975ec9b)
+
+# Lab 13
+## Create a Disaster Recovery Maintenance Window for Patching, Image Creation, and Deletion.
+![Screenshot (1029)](https://github.com/network-charles/AWS-Sys-Ops/assets/30233365/a8e1f944-4a8d-4a1c-b561-b4aa71a0ce44)
+
