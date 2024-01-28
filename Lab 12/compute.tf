@@ -4,7 +4,7 @@ resource "aws_launch_template" "Linux" {
   instance_type = "t3.micro"
   key_name      = var.key_name
   vpc_security_group_ids = [ aws_security_group.SG.id ]
-  user_data     = file("${path.module}/script.sh")
+  user_data     = filebase64("${path.module}/script.sh")
 
   placement {
     tenancy = "default"
